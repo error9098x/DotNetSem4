@@ -136,7 +136,8 @@ namespace MyNamespace {
         int choice = Convert.ToInt32(Console.ReadLine());
         Random rnd = new Random();
         int computer = rnd.Next(1,4);
-        Console.WriteLine("Computer choice is " + computer);
+        string arr = ["Rock","Paper","Scissors"]
+        Console.WriteLine("Computer choice is " + arr[computer-1]);
         if (choice == 1){
             if (computer == 1){
                 Console.WriteLine("Draw");
