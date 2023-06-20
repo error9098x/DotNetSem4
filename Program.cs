@@ -112,7 +112,7 @@ namespace MyNamespace {
         int num = Convert.ToInt32(Console.ReadLine());
         int a = 0;
         int b = 1;
-        int c = 0;
+        int c = 0;      
         for ( int i = 0 ; i < num ; i++){
             c = a + b;
             a = b;
@@ -136,6 +136,7 @@ namespace MyNamespace {
         int choice = Convert.ToInt32(Console.ReadLine());
         Random rnd = new Random();
         int computer = rnd.Next(1,4);
+        Console.WriteLine("Computer choice is " + computer);
         if (choice == 1){
             if (computer == 1){
                 Console.WriteLine("Draw");
