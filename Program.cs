@@ -15,7 +15,8 @@ namespace MyNamespace {
             Console.WriteLine("8. Prime Numbers");
             Console.WriteLine("9. Check Prime Numbers");
             Console.WriteLine("10. Case Converter");
-            Console.WriteLine("11. Exit");
+            Console.WriteLine("11. Rational Numbers");
+            Console.WriteLine("12. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -49,6 +50,9 @@ namespace MyNamespace {
                     CaseConverter();
                     break;
                 case "11":
+                    Rational();
+                    break;
+                case "12":
                     return;
                 
                 default:
@@ -248,6 +252,17 @@ namespace MyNamespace {
             Console.WriteLine("Invalid input");
     }
 
+}
+
+static void Rational(){
+    Console.WriteLine("Enter the number");
+    double num = Convert.ToDouble(Console.ReadLine());
+    if(num % 1 == 0){
+        Console.WriteLine("The number is rational");
+    }
+    else{
+        Console.WriteLine("The number is irrational");
+    }   
 }
 }
 }
