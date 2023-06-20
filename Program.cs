@@ -136,7 +136,14 @@ namespace MyNamespace {
         int choice = Convert.ToInt32(Console.ReadLine());
         Random rnd = new Random();
         int computer = rnd.Next(1,4);
-        string arr = ["Rock","Paper","Scissors"]
+        // make a string arr
+        string[] arr = new string[3];
+        arr[0] = "Rock";
+        arr[1] = "Paper";
+        arr[2] = "Scissors";
+        //computer thinking time
+        Console.WriteLine("Computer is thinking...");
+        System.Threading.Thread.Sleep(2000);
         Console.WriteLine("Computer choice is " + arr[computer-1]);
         if (choice == 1){
             if (computer == 1){
