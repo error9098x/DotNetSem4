@@ -3,6 +3,7 @@ using System;
 namespace MyNamespace {
     class ChooseProgram{
         static void Main(string[] args){
+            while(true){
             Console.WriteLine("Hello, Choose a Program to run!");
             Console.WriteLine("1. Hello World");
             Console.WriteLine("2. Sum of 2 numbers");
@@ -35,10 +36,23 @@ namespace MyNamespace {
                 case "7":
                     game();
                     break;  
-               
+                case "8":
+                    return;
                 default:
                     Console.WriteLine("Invalid input");
                     break;
+            }
+            Console.WriteLine("Do you want to continue? (y/n)");
+            string answer = Console.ReadLine();
+            if (answer == "n"){
+                break;
+            }
+            else if (answer == "y"){
+                continue;
+            }
+            else{
+                Console.WriteLine("Invalid input");
+            }
             }
         }
 
@@ -91,7 +105,7 @@ namespace MyNamespace {
             a = b;
             b = c;
             if (i == num - 1){
-                Console.Write(c);
+                Console.Write(c+"\n");
             }
             else{
                 Console.Write(c + " , ");
