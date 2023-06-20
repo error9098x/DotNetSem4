@@ -41,6 +41,9 @@ namespace MyNamespace {
                     Prime();
                     break;
                 case "9":
+                    CheckPrime();
+                    break;
+                case "10":
                     return;
                 
                 default:
@@ -198,5 +201,20 @@ namespace MyNamespace {
         }
         Console.WriteLine("\nThere are "+counter+" prime numbers in the range");
     }
+
+    static void CheckPrime(){
+        Console.WriteLine("Enter the number");
+        int num = Convert.ToInt32(Console.ReadLine());
+        for( int i = 2; i <= num; i++){
+            if(num % i == 0){
+                Console.WriteLine("Not a prime number");
+                break;
+            }
+            else if (i == num - 1){
+                Console.WriteLine("Prime number");
+            }
+        }
+    }
+
 }
 }
