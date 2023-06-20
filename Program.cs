@@ -12,7 +12,8 @@ namespace MyNamespace {
             Console.WriteLine("5. Subtraction of 2 numbers");
             Console.WriteLine("6. Fibonnaci Sequence");
             Console.WriteLine("7. Rock-Paper-Scissors");
-            Console.WriteLine("8. Exit");
+            Console.WriteLine("8. Prime Numbers");
+            Console.WriteLine("9. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -37,7 +38,11 @@ namespace MyNamespace {
                     game();
                     break;  
                 case "8":
+                    Prime();
+                    break;
+                case "9":
                     return;
+                
                 default:
                     Console.WriteLine("Invalid input");
                     break;
@@ -171,9 +176,24 @@ namespace MyNamespace {
             Console.WriteLine("Invalid input");
         }
 
+
     }
-
-
 }
+
+  static void Prime(){
+        //input the range and find all the prime numbers in the range
+        Console.WriteLine("Enter the range");
+        int range = Convert.ToInt32(Console.ReadLine());
+        for (int i =2;i<=range;i++){
+            for (int j = 2; j <= i; j++){
+                if (i % j == 0){
+                    break;
+                }
+                else if (j == i - 1){
+                    Console.Write(i+" ");
+                }
+            }
+        }
+    }
 }
 }
