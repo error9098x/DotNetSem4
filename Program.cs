@@ -13,7 +13,9 @@ namespace MyNamespace {
             Console.WriteLine("6. Fibonnaci Sequence");
             Console.WriteLine("7. Rock-Paper-Scissors");
             Console.WriteLine("8. Prime Numbers");
-            Console.WriteLine("9. Exit");
+            Console.WriteLine("9. Check Prime Numbers");
+            Console.WriteLine("10. Case Converter");
+            Console.WriteLine("11. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -44,6 +46,9 @@ namespace MyNamespace {
                     CheckPrime();
                     break;
                 case "10":
+                    CaseConverter();
+                    break;
+                case "11":
                     return;
                 
                 default:
@@ -212,9 +217,28 @@ namespace MyNamespace {
             }
             else if (i == num - 1){
                 Console.WriteLine("Prime number");
+                break;
             }
         }
     }
 
+    static void CaseConverter(){
+        Console.WriteLine("Enter the string");
+        string str = Console.ReadLine();
+        Console.WriteLine("Enter the choice");
+        Console.WriteLine("1. Upper case");
+        Console.WriteLine("2. Lower case");
+        int choice = Convert.ToInt32(Console.ReadLine());
+        if (choice == 1){
+            Console.WriteLine(str.ToUpper());
+        }
+        else if (choice == 2){
+            Console.WriteLine(str.ToLower());
+        }
+        else{
+            Console.WriteLine("Invalid input");
+    }
+
+}
 }
 }
