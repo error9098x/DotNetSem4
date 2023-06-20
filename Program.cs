@@ -1,6 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 using System;
-
 namespace MyNamespace {
     class ChooseProgram{
         static void Main(string[] args){
@@ -20,6 +19,23 @@ namespace MyNamespace {
                 case "2":
                     Sum();
                     break;
+                case "3":
+                    Multiplication();
+                    break;
+
+                case "4":
+                    Division();
+                    break;
+                case "5":
+                    Substraction();
+                    break;  
+                case "6":
+                    Fibonnaci();
+                    break;
+                case "7":
+                    game();
+                    break;  
+               
                 default:
                     Console.WriteLine("Invalid input");
                     break;
