@@ -84,6 +84,66 @@ namespace MyNamespace {
         
     }
 
+    static void game(){
+        while(true){
+        Console.WriteLine("Enter your choice");
+        Console.WriteLine("1. Rock");
+        Console.WriteLine("2. Paper");
+        Console.WriteLine("3. Scissors");
+        int choice = Convert.ToInt32(Console.ReadLine());
+        Random rnd = new Random();
+        int computer = rnd.Next(1,4);
+        if (choice == 1){
+            if (computer == 1){
+                Console.WriteLine("Draw");
+            }
+            else if (computer == 2){
+                Console.WriteLine("You lose");
+            }
+            else{
+                Console.WriteLine("You win");
+            }
+        }
+        else if (choice == 2){
+            if (computer == 1){
+                Console.WriteLine("You win");
+            }
+            else if (computer == 2){
+                Console.WriteLine("Draw");
+            }
+            else{
+                Console.WriteLine("You lose");
+            }
+        }
+        else if (choice == 3){
+            if (computer == 1){
+                Console.WriteLine("You lose");
+            }
+            else if (computer == 2){
+                Console.WriteLine("You win");
+            }
+            else{
+                Console.WriteLine("Draw");
+            }
+        }
+        else{
+            Console.WriteLine("Invalid input");
+        }
+        Console.WriteLine("Do you want to play again? (y/n)");
+        string answer = Console.ReadLine();
+        if (answer == "n"){
+            break;
+        }
+        else if (answer == "y"){
+            continue;
+        }
+        else{
+            Console.WriteLine("Invalid input");
+        }
 
+    }
+
+
+}
 }
 }
