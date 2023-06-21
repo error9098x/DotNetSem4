@@ -315,5 +315,16 @@ static void floyd(){
         }
         Console.WriteLine();
 }   }
+
+static void sphere(){
+    Console.WriteLine("Enter the radius of the sphere");
+    double radius = Convert.ToDouble(Console.ReadLine());
+    double volume  = (4/3) * Math.PI * Math.Pow(radius,3);
+    Console.WriteLine("The volume of the sphere is " + volume);
+    double surfaceArea = 4 * Math.PI * Math.Pow(radius,2);
+    Console.WriteLine("The surface area of the sphere is " + surfaceArea);
+}
+
+
 }
 }
