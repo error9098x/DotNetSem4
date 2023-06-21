@@ -16,7 +16,8 @@ namespace MyNamespace {
             Console.WriteLine("9. Check Prime Numbers");
             Console.WriteLine("10. Case Converter");
             Console.WriteLine("11. Rational Numbers");
-            Console.WriteLine("12. Exit");
+            Console.WriteLine("12. Swap without 3rd variable");
+            Console.WriteLine("13. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -53,6 +54,9 @@ namespace MyNamespace {
                     Rational();
                     break;
                 case "12":
+                    swap();
+                    break;
+                case "13":
                     return;
                 
                 default:
