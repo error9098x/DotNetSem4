@@ -18,7 +18,9 @@ namespace MyNamespace {
             Console.WriteLine("11. Rational Numbers");
             Console.WriteLine("12. Swap without 3rd variable");
             Console.WriteLine("13. Floyd's Triangle");
-            Console.WriteLine("14. Exit");
+            Console.WriteLine("14. Calculate the volume & surface area of a sphere");
+            Console.WriteLine("15. Demonstrate BitWise Operators");
+            Console.WriteLine("16. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -61,6 +63,12 @@ namespace MyNamespace {
                     floyd();
                     break;
                 case "14":
+                    sphere();
+                    break;
+                case "15":
+                    bitwise();
+                    break;
+                case "16":
                     return;
                 
                 default:
@@ -325,6 +333,22 @@ static void sphere(){
     Console.WriteLine("The surface area of the sphere is " + surfaceArea);
 }
 
-
+static void  bitwise(){
+    //demonstrate bitwise operator
+    Console.WriteLine("Enter the number 1");
+    Console.WriteLine("Enter the number 2");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    //convert to binary
+    string binary1 = Convert.ToString(num1,2);
+    string binary2 = Convert.ToString(num2,2);
+    Console.WriteLine("The binary of number 1 is " + binary1);
+    Console.WriteLine("The binary of number 2 is " + binary2);
+    Console.WriteLine("The bitwise AND is " + (num1 & num2));
+    Console.WriteLine("The bitwise OR is " + (num1 | num2));
+    Console.WriteLine("The bitwise XOR is " + (num1 ^ num2));
+    Console.WriteLine("The bitwise NOT of number 1 is " + (~num1));
+    Console.WriteLine("The bitwise NOT of number 2 is " + (~num2));
+}
 }
 }
