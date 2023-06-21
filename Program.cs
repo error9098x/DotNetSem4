@@ -273,7 +273,10 @@ static void swap(){
      x = x + y;
      y = x - y;
      x = x - y;
-    Console.WriteLine("The number 1 is " + x);
+    Console.WriteLine(" x is " + x);
+    Console.WriteLine(" y is " + y);
+    Console.WriteLine("After Swap x is " + x);
+    Console.WriteLine("After Swap y is " + y);
 }
 }
 }
