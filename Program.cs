@@ -264,5 +264,15 @@ static void Rational(){
         Console.WriteLine("The number is irrational");
     }   
 }
+
+static void swap(){
+     Console.WriteLine("Enter the number 1");
+     double x = Convert.ToDouble(Console.ReadLine());
+     Console.WriteLine("Enter the number 2");
+     double y = Convert.ToDouble(Console.ReadLine())
+     
+
+
+}
 }
 }
