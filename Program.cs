@@ -300,5 +300,16 @@ static void smallest(){
     Console.WriteLine("The smallest number is " + smallest);
 }
 
+static void floyd(){
+    Console.WriteLine("Enter the number of rows");
+    int rows = Convert.ToInt32(Console.ReadLine());
+    int num = 1;
+    for( int i = 1; i<= rows; i++){
+        for ( int j = i; j > 0; j--){
+            Console.Write(num + " ");
+            num++;
+        }
+        Console.WriteLine();
+}   }
 }
 }
