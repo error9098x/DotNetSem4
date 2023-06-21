@@ -362,6 +362,7 @@ static void jagged(){
     for (int i = 0; i< rows; i++){
         Console.WriteLine("Enter the numbers in the "+(i+1)+"th row ");
         int size = Convert.ToInt32(Console.ReadLine());
+        arr[i] = new int[size];
         for (int j = 0; j < size; j++){
             Console.WriteLine("Enter the element "+ (j+1));
             arr[i][j] = Convert.ToInt32(Console.ReadLine());
