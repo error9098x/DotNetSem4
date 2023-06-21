@@ -20,7 +20,8 @@ namespace MyNamespace {
             Console.WriteLine("13. Floyd's Triangle");
             Console.WriteLine("14. Calculate the volume & surface area of a sphere");
             Console.WriteLine("15. Demonstrate BitWise Operators");
-            Console.WriteLine("16. Exit");
+            Console.WriteLine("16. Demonstrate Jagged Array");
+            Console.WriteLine("17. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -69,6 +70,9 @@ namespace MyNamespace {
                     bitwise();
                     break;
                 case "16":
+                    jagged();
+                    break;
+                case "17":
                     return;
                 
                 default:
@@ -349,6 +353,30 @@ static void  bitwise(){
     Console.WriteLine("The bitwise XOR is " + (num1 ^ num2));
     Console.WriteLine("The bitwise NOT of number 1 is " + (~num1));
     Console.WriteLine("The bitwise NOT of number 2 is " + (~num2));
+}
+
+static void jagged(){
+    Console.WriteLine("Enter the number of rows");
+    int rows = Convert.ToInt32(Console.ReadLine());
+    int[][] arr = new int[rows][];
+    for (int i = 0; i< rows; i++){
+        Console.WriteLine("Enter the numbers in the "+(i+1)+"th row ");
+        int size = Convert.ToInt32(Console.ReadLine());
+        for (int j = 0; j < size; j++){
+            Console.WriteLine("Enter the element "+ (j+1));
+            arr[i][j] = Convert.ToInt32(Console.ReadLine());
+        }
+    }
+
+    //print the jagged 2d array
+    Console.WriteLine("The jagged 2D array is ");
+    for(int i = 0 ; i< rows;i++){
+        for(int j = 0; j < arr[i].Length; j++){
+            Console.Write(arr[i][j] + " ");
+        }
+        Console.WriteLine();
+    }
+
 }
 }
 }
