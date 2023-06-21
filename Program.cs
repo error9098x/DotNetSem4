@@ -17,7 +17,8 @@ namespace MyNamespace {
             Console.WriteLine("10. Case Converter");
             Console.WriteLine("11. Rational Numbers");
             Console.WriteLine("12. Swap without 3rd variable");
-            Console.WriteLine("13. Exit");
+            Console.WriteLine("13. Floyd's Triangle");
+            Console.WriteLine("14. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -57,6 +58,9 @@ namespace MyNamespace {
                     swap();
                     break;
                 case "13":
+                    floyd();
+                    break;
+                case "14":
                     return;
                 
                 default:
