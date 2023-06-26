@@ -21,7 +21,13 @@ namespace MyNamespace {
             Console.WriteLine("14. Calculate the volume & surface area of a sphere");
             Console.WriteLine("15. Demonstrate BitWise Operators");
             Console.WriteLine("16. Demonstrate Jagged Array");
-            Console.WriteLine("17. Exit");
+            Console.WriteLine("17. Convert Fahrenheit to Celsius");
+            Console.WriteLine("18. Check Palindrome");
+            Console.WriteLine("19. Check Vowels");
+            Console.WriteLine("20. Caculate Factorial");
+            Console.WriteLine("21. Calculate Base Conversion");
+            Console.WriteLine("22. Mutiply using Constructor");
+            Console.WriteLine("23. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -73,6 +79,31 @@ namespace MyNamespace {
                     jagged();
                     break;
                 case "17":
+                    convertfarenheit();
+                    break;
+                case "18":
+                    palindrome();
+                    break;
+                case "19":
+                    vowels();
+                    break;
+                case "20":
+                    fact();
+                    break;
+                case "21":
+                    basecalc();
+                    break;
+                case "22":
+                    //create object of class Multiply
+                    Console .WriteLine("Enter the first number");
+                    int num1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter the second number");
+                    int num2 = Convert.ToInt32(Console.ReadLine());
+                    Multiply obj = new Multiply(num1, num2);
+                    Console.WriteLine("The product of two numbers is " + obj.multiply());
+                    break;
+            
+                case "23":
                     return;
                 
                 default:
@@ -379,5 +410,100 @@ static void jagged(){
     }
 
 }
-}
-}
+
+
+        static void convertfarenheit(){
+            Console.WriteLine("Enter the temperature in celsius");
+            double celsius = Convert.ToDouble(Console.ReadLine());
+            double farenheit = (celsius * 9/5) + 32;
+            Console.WriteLine("The temperature in farenheit is " + farenheit);
+        }
+
+        static void palindrome(){
+            Console.WriteLine("Enter the string");
+            string str = Console.ReadLine();
+            string reverse = "";
+            for (int i = str.Length - 1; i >= 0; i--){
+                reverse += str[i];
+            }
+            if (str == reverse){
+                Console.WriteLine("The string is a palindrome");
+            }
+            else{
+                Console.WriteLine("The string is not a palindrome");
+            }
+        }
+        
+        static void vowels(){
+            Console.WriteLine("Enter the string");
+            string str = Console.ReadLine();
+            int count = 0;
+            for (int i = 0; i < str.Length; i++){
+                if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o'|| str[i] == 'u'){
+                    count++;
+                }
+            }
+            Console.WriteLine("The number of vowels in the string is " + count);
+        }
+        static void fact(){
+            Console.WriteLine("Enter the number");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int fact = 1;
+            for (int i = 1; i <= num; i++){
+                fact = fact * i;
+            }
+            Console.WriteLine("The factorial of the number is " + fact);
+        }
+        static void basecalc(){
+                Console.WriteLine("Choose the number");
+                Console.WriteLine("1. Decimal to Binary");
+                Console.WriteLine("2. Hexadecimal to Octal");
+                Console.WriteLine("3. OCtal to Decimal");
+                Console.WriteLine("4. Binary to Decimal");
+                switch(Console.ReadLine()){
+                    case "1":
+                        Console.WriteLine("Enter the decimal number");
+                        int dec = Convert.ToInt32(Console.ReadLine());
+                        string binary = Convert.ToString(dec,2);
+                        Console.WriteLine("The binary number is " + binary);
+                        break;
+                    case "2":
+                        Console.WriteLine("Enter the hexadecimal number");
+                        string hex = Console.ReadLine();
+                        string octal = Convert.ToString(Convert.ToInt32(hex,16),8);
+                        Console.WriteLine("The octal number is " + octal);
+                        break;
+                    case "3":
+                        Console.WriteLine("Enter the octal number");
+                        string oct = Console.ReadLine();
+                        int deci = Convert.ToInt32(oct,8);
+                        Console.WriteLine("The decimal number is " + deci);
+                        break;
+                    case "4":
+                        Console.WriteLine("Enter the binary number");
+                        string bin = Console.ReadLine();
+                        int decim = Convert.ToInt32(bin,2);
+                        Console.WriteLine("The decimal number is " + decim);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice");
+                        break;
+                }
+            }
+
+            //multiply using parametrizeed constructor
+            class Multiply{
+                int num1 ;
+                int num2 ;
+                public Multiply(int num1, int num2){
+                    this.num1 = num1;
+                    this.num2 = num2;
+                }
+                public int multiply(){
+                    return num1 * num2;
+                }
+            }
+        }
+ }
+
+
