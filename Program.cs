@@ -30,6 +30,8 @@ namespace MyNamespace {
             Console.WriteLine("21. Calculate Base Conversion");
             Console.WriteLine("22. Mutiply using Constructor");
             Console.WriteLine("23. Add using Method Overloading");
+            Console.WriteLine("24. Exception Handling");
+            Console.WriteLine("25. Using Collections");
             Console.WriteLine("30. Exit");
             switch (Console.ReadLine()){
                 case "1":
@@ -116,7 +118,9 @@ namespace MyNamespace {
                 case "24":
                     handle();
                     break;
-                
+                case "25":
+                    showcollection();
+                    break;
                 
                 case "30":
                     return;
