@@ -1,5 +1,7 @@
 ﻿
 using System;
+using System.Collections;
+
 namespace MyNamespace {
     class ChooseProgram{
         static void Main(string[] args){
@@ -27,7 +29,8 @@ namespace MyNamespace {
             Console.WriteLine("20. Caculate Factorial");
             Console.WriteLine("21. Calculate Base Conversion");
             Console.WriteLine("22. Mutiply using Constructor");
-            Console.WriteLine("23. Exit");
+            Console.WriteLine("23. Add using Method Overloading");
+            Console.WriteLine("30. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -103,7 +106,19 @@ namespace MyNamespace {
                     Console.WriteLine("The product of two numbers is " + obj.multiply());
                     break;
             
+                
                 case "23":
+                    //create object of class Add
+                    Add obj1 = new Add();
+                    Console.WriteLine("The Sum : " + obj1.add(1,2,3));
+                    Console.WriteLine("The Sum : " + obj1.add(1,2));
+                    break;
+                case "24":
+                    handle();
+                    break;
+                
+                
+                case "30":
                     return;
                 
                 default:
@@ -502,6 +517,52 @@ static void jagged(){
                 public int multiply(){
                     return num1 * num2;
                 }
+            }
+
+            //add two values using function overloading
+            class Add{
+                public int add(int num1, int num2){
+                    return num1 + num2;
+                }
+                public int add(int num1, int num2, int num3){
+                    return num1 + num2 + num3;
+                }
+            }
+
+            //function for 0 exception handling
+            static void handle(){
+                try{
+                    Console.WriteLine("Enter the number");
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    int result = 100/num;
+                    Console.WriteLine("The result is " + result);
+                }
+                catch(DivideByZeroException e){
+                    Console.WriteLine("Cannot divide by zero");
+                }
+            }
+            //program to show all collection classes in c#
+            static void showcollection(){
+                ArrayList arr = new ArrayList();
+                arr.Add(1);
+                arr.Add("Hello");
+                arr.Add(2.5);
+                arr.Add(true);
+                Console.WriteLine("The elements in the array list are ");
+                foreach(var i in arr){
+                    Console.WriteLine(i);
+                }
+                Console.WriteLine("The number of elements in the array list are " + arr.Count);
+                Console.WriteLine("The index of the element Hello is " + arr.IndexOf("Hello"));
+                Console.WriteLine("The element at index 2 is " + arr[2]);
+                arr.Remove(2.5);
+                Console.WriteLine("The number of elements in the array list are " + arr.Count);
+                Console.WriteLine("The index of the element Hello is " + arr.IndexOf("Hello"));
+                Console.WriteLine("The element at index 2 is " + arr[2]);
+                arr.Clear();
+                Console.WriteLine("The number of elements in the array list are " + arr.Count);
+                Console.WriteLine("The index of the element Hello is " + arr.IndexOf("Hello"));
+                Console.WriteLine("The element at index 2 is " + arr[2]);
             }
         }
  }
