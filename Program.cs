@@ -32,7 +32,7 @@ namespace MyNamespace {
             Console.WriteLine("23. Add using Method Overloading");
             Console.WriteLine("24. Exception Handling");
             Console.WriteLine("25. Using Collections");
-            Console.WriteLine("30. Exit");
+            Console.WriteLine("26. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -122,7 +122,7 @@ namespace MyNamespace {
                     showcollection();
                     break;
                 
-                case "30":
+                case "26":
                     return;
                 
                 default:
