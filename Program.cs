@@ -546,28 +546,56 @@ static void jagged(){
                 }
             }
             //program to show all collection classes in c#
-            static void showcollection(){
-                ArrayList arr = new ArrayList();
-                arr.Add(1);
-                arr.Add("Hello");
-                arr.Add(2.5);
-                arr.Add(true);
-                Console.WriteLine("The elements in the array list are ");
-                foreach(var i in arr){
-                    Console.WriteLine(i);
-                }
-                Console.WriteLine("The number of elements in the array list are " + arr.Count);
-                Console.WriteLine("The index of the element Hello is " + arr.IndexOf("Hello"));
-                Console.WriteLine("The element at index 2 is " + arr[2]);
-                arr.Remove(2.5);
-                Console.WriteLine("The number of elements in the array list are " + arr.Count);
-                Console.WriteLine("The index of the element Hello is " + arr.IndexOf("Hello"));
-                Console.WriteLine("The element at index 2 is " + arr[2]);
-                arr.Clear();
-                Console.WriteLine("The number of elements in the array list are " + arr.Count);
-                Console.WriteLine("The index of the element Hello is " + arr.IndexOf("Hello"));
-                Console.WriteLine("The element at index 2 is " + arr[2]);
-            }
+            static void showcollection()
+{
+    ArrayList arrayList = new ArrayList();
+    arrayList.Add(1);
+    arrayList.Add("two");
+    arrayList.Add(3.0);
+
+    Console.WriteLine("ArrayList:");
+    foreach (var item in arrayList)
+    {
+        Console.WriteLine(item);
+    }
+    Console.WriteLine("");
+
+    List<int> list = new List<int>();
+    list.Add(1);
+    list.Add(2);
+    list.Add(3);
+
+    Console.WriteLine("List<int>:");
+    foreach (int item in list)
+    {
+        Console.WriteLine(item);
+    }
+    Console.WriteLine("");
+
+    Stack<string> stack = new Stack<string>();
+    stack.Push("first");
+    stack.Push("second");
+    stack.Push("third");
+
+    Console.WriteLine("Stack<string>:");
+    foreach (string item in stack)
+    {
+        Console.WriteLine(item);
+    }
+    Console.WriteLine("");
+
+    Dictionary<string, int> dictionary = new Dictionary<string, int>();
+    dictionary["one"] = 1;
+    dictionary["two"] = 2;
+    dictionary["three"] = 3;
+
+    Console.WriteLine("Dictionary<string, int>:");
+    foreach (var item in dictionary)
+    {
+        Console.WriteLine(item.Key + ": " + item.Value);
+    }
+    Console.WriteLine("");
+}
         }
  }
 
