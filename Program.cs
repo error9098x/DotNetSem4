@@ -603,7 +603,18 @@ static void jagged(){
 
         static void test(){
 
+           void GetValues(out int x, out int y, out int z)
+                    {
+                        x = 1;
+                        y = 2;
+                        z = 3;
+                    }
 
+                    int a, b, c;
+                    GetValues(out a, out b, out c);
+                    Console.WriteLine(a); // Output: 1
+                    Console.WriteLine(b); // Output: 2
+                    Console.WriteLine(c); // Output: 3
             Console.WriteLine("hello");
         }
 
