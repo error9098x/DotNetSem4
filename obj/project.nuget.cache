@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "O8Z5sQ5mVzZsqQD/gNPuINZmc7c76S9RyHqic8HazZEdgvjB7ttw9+zPjTC2zVVLyvRqx1OalhAMRdba1OvcqA==",
+  "dgSpecHash": "dFddH6utOS2quBjG56gyxNDWtftjBVR89fdVYrioHxwoNYiVjxlY8rc0UGQqdB2Cm2EeK6tWtX/NjbQY4ckrpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aviral\\Desktop\\DotNet\\DotNet.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/workspaces/DotNetSem4/DotNet.csproj",
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/microsoft.netcore.app.ref/6.0.16/microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.16/microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512",
+    "/home/codespace/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.16/microsoft.netcore.app.host.linux-x64.6.0.16.nupkg.sha512"
+  ],
   "logs": []
 }

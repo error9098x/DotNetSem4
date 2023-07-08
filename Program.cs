@@ -32,7 +32,8 @@ namespace MyNamespace {
             Console.WriteLine("23. Add using Method Overloading");
             Console.WriteLine("24. Exception Handling");
             Console.WriteLine("25. Using Collections");
-            Console.WriteLine("26. Exit");
+            Console.WriteLine("26. Test");
+            Console.WriteLine("27. Exit");
             switch (Console.ReadLine()){
                 case "1":
                     Hello();
@@ -123,6 +124,9 @@ namespace MyNamespace {
                     break;
                 
                 case "26":
+                    test();
+                    return;
+                case "27":
                     return;
                 
                 default:
@@ -596,6 +600,24 @@ static void jagged(){
     }
     Console.WriteLine("");
 }
+
+        static void test(){
+
+
+            Console.WriteLine("hello");
+        }
+
+
+
+
+
+
+
+     
+
+
+
+
         }
  }
 
